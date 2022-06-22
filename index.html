@@ -22,13 +22,13 @@
         </a>
       </div>
       <div style="color: white" class="navbar-burger burger" data-target="navbarMenu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span aria-haspopup="true"></span>
+        <span aria-haspopup="true"></span>
+        <span aria-haspopup="true"></span>
       </div>
       <nav id="navbarMenu" class="navbar-menu">
-        <ul class="navbar-end">
-          <li class="navbar-item">
+        <ul role="menubar" class="navbar-end">
+          <li role="menuitem" class="navbar-item">
             <a href="/" class="button is-white is-outlined">
                                 <span class="icon">
                                     <i class="fa fa-home"></i>
@@ -36,7 +36,7 @@
               <span>Home</span>
             </a>
           </li>
-          <li class="navbar-item">
+          <li role="menuitem" class="navbar-item">
             <a href="/" class="button is-white is-outlined">
                                 <span class="icon">
                                 <i class="fab fa-superpowers"></i>
@@ -44,7 +44,7 @@
               <span>Examples</span>
             </a>
           </li>
-          <li class="navbar-item" >
+          <li role="menuitem" class="navbar-item" >
             <a href="/" class="button is-white is-outlined">
                                 <span class="icon">
                                     <i class="fa fa-book"></i>
@@ -52,7 +52,7 @@
               <span>Documentation</span>
             </a>
           </li>
-          <li class="navbar-item">
+          <li role="menuitem" class="navbar-item">
             <a href="/" class="button is-white is-outlined">
                                 <span class="icon">
                                     <i class="fab fa-github"></i>
@@ -76,8 +76,8 @@
         <div class="box">
           <div class="field is-grouped">
             <label for="input" class="visuallyhidden">Search Input Field: </label>
-            <input class="control is-expanded" name="input" id="input" >
-            <button style="background-color: #3273dc"
+            <input aria-placeholder="input here" class="control is-expanded" name="input" id="input" >
+            <button aria-controls="input" style="background-color: #3273dc"
                     class="control button is-info">Notify Me
             </button>
           </div>
@@ -87,18 +87,18 @@
   </div>
 </div>
 <nav class="breadcrumb">
-  <ol>
-    <li><a href="/">Location1</a></li>
-    <li><a href="/">Location2</a></li>
-    <li><a href="/">Location3</a></li>
-    <li><a href="/">Location4</a></li>
+  <ol role="breadcrumblist">
+    <li role="breadcrumbitem"><a href="/">Location1</a></li>
+    <li role="breadcrumbitem"><a href="/">Location2</a></li>
+    <li role="breadcrumbitem"><a href="/">Location3</a></li>
+    <li role="breadcrumbitem"><a href="/">Location4</a></li>
   </ol>
 </nav>
 
 <main>
   <div class="section" id="about">
     <div class="section-heading has-text-centered">
-      <section>
+      <section aria-label="about paragraph">
         <p class="title is-2 section-heading" >About Us</p>
         <cite class="subtitle is-5 info-tiles">We of all trades, master of "some"</cite>
         <p class="container" >Web developers with more than <b>4 years</b> of well-rounded experience with a
@@ -114,7 +114,7 @@
       </section>
     </div>
     <div class="content container">
-      <section>
+      <section aria-label="first paragraph">
         <h1 class="is-1 title section-heading" >Hello World</h1>
         <p class="container" >Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan,
           metus
@@ -124,7 +124,7 @@
           erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!
         </p>
       </section>
-      <section>
+      <section aria-label="second paragraph">
         <h2 class="is-2 title section-heading">Second level</h2>
         <p class="container">Curabitur accumsan turpis pharetra <b>augue tincidunt</b> blandit. Quisque condimentum maximus
           mi,
@@ -142,7 +142,7 @@
       </section>
       <section>
         <h3 class="is-3 title section-heading" >Third level</h3>
-        <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="/" class="skip link visuallyhidden"> non ante </a>. Phasellus lacus ex, semper
+        <p>Quisque ante lacus, malesuada ac auctor vitae, congue <a href="/" class="skip link visuallyhidden" aria-hidden="true"> non ante </a>. Phasellus lacus ex, semper
           ac
           tortor
           nec, fringilla condimentum orci. Fusce eu rutrum tellus.</p>
@@ -257,7 +257,7 @@
         </figure>
       </section>
       <section>
-        <h1 class="is-6 title section-heading" >Sixth level</h1>
+        <h6 class="is-6 title section-heading" >Sixth level</h6>
         <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut
           eleifend
           eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque
@@ -273,11 +273,11 @@
   <div class="hero has-background-grey-light">
     <div class="container features">
       <div class="section-heading has-text-centered">
-        <h1 class="title is-2" >Three key features</h1>
-        <h2 class="subtitle is-5">We don't hide what we do</h2>
+        <h2 class="title is-2" >Three key features</h2>
+        <cite aria-live=“polite” class="subtitle is-5">We don't hide what we do</cite>
       </div>
       <div class="columns" >
-        <div class="column is-4">
+        <div class="column is-4" id="card1">
           <div class="card is-shady">
             <div class="card-image has-text-centered">
               <i class="fa fa-paw" alt="paw" ></i>
@@ -290,13 +290,13 @@
                   Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere
                   ac
                   ut consequat semper viverra nam.</p>
-                <p><a>Learn more</a></p>
+                <a aria-controls="card1" href="/">Learn more</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="column is-4" >
+        <div class="column is-4" id="card2" >
           <div class="card is-shady">
             <div class="card-image has-text-centered" alt="icon" >
               <i class="fab fa-empire"></i>
@@ -310,13 +310,13 @@
                   neque
                   egestas cmonsu songue. Phasellus vestibulum lorem
                   sed risus.</p>
-                <p><a>Learn more</a></p>
+                <a aria-controls="card2" href="/">Learn more</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="column is-4">
+        <div class="column is-4" id="card3">
           <div class="card is-shady">
             <div class="card-image has-text-centered">
               <i class="fab fa-apple"></i>
@@ -327,7 +327,7 @@
                 <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla
                   pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo
                   viverra maecenas accumsan lacus vel facilisis.</p>
-                <p><a>Learn more</a></p>
+                <a aria-controls="card3" href="/">Learn more</a>
               </div>
             </div>
           </div>
